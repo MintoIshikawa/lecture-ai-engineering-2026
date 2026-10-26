@@ -87,4 +87,10 @@ pyproject.toml / uv.lock  依存パッケージとその固定版
 AIE_MODEL=gemini-3.5-flash uv run python -m app.ask "LoRAとは何ですか？"
 ```
 
+`app.ask` の `--temperature` オプションで、回答の多様さも調整できます。省略するとモデルの既定値を使います。
+
+```bash
+uv run python -m app.ask --temperature 0.2 "LoRAとは何ですか？"
+```
+
 無料枠には1分あたり・1日あたりのリクエスト上限があります。上限は [Gemini API のレート制限のページ](https://ai.google.dev/gemini-api/docs/rate-limits) で確認してください。
